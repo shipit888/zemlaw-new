@@ -232,7 +232,8 @@
     <header class="fixed top-0 left-0 right-0 z-50 py-4 px-4 transition-all duration-300">
         <div class="max-w-[1240px] mx-auto px-6 py-3 flex justify-between items-center relative z-50 header-transparent">
             <div class="flex items-center gap-4 z-50">
-                <img src="logo.jpg" alt="Логотип" class="h-10 w-auto object-contain hidden md:block" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <!-- Fallback to icon if image fails -->
+                <img src="logo.png" alt="Логотип" class="h-10 w-auto object-contain hidden md:block" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                 <div class="hidden w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-accent border border-white/5 md:hidden"><i data-lucide="scale" class="w-5 h-5"></i></div>
                 
                 <div class="flex flex-col leading-none">
@@ -571,7 +572,8 @@
         </div>
     </section>
 
-    <footer class="border-t border-white/10 py-12 text-center text-xs text-gray-600 uppercase tracking-widest relative z-10 bg-[#131316]">
+    <!-- Убрал bg-[#131316], теперь фон прозрачный и совпадает с body -->
+    <footer class="border-t border-white/10 py-12 text-center text-xs text-gray-600 uppercase tracking-widest relative z-10">
         <p>© 2025 Бондаренко Антон Андреевич. Все права защищены. Не является публичной офертой.</p>
     </footer>
 
