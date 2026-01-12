@@ -233,7 +233,9 @@
         <div class="max-w-[1240px] mx-auto px-6 py-3 flex justify-between items-center relative z-50 header-transparent">
             <div class="flex items-center gap-4 z-50">
                 <!-- Fallback to icon if image fails -->
-                <img src="logo.png" alt="Логотип" class="h-10 w-auto object-contain hidden md:block" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <!-- Добавил классы invert и mix-blend-screen, чтобы убрать белый фон у логотипа через CSS -->
+                <!-- Также убрал hidden md:block, чтобы логотип был виден на всех устройствах -->
+                <img src="logo.png" alt="Логотип" class="h-10 w-auto object-contain invert mix-blend-screen" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex');">
                 <div class="hidden w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-accent border border-white/5 md:hidden"><i data-lucide="scale" class="w-5 h-5"></i></div>
                 
                 <div class="flex flex-col leading-none">
