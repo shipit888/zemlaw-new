@@ -7,7 +7,8 @@
     <meta name="keywords" content="земельный юрист, консалтинг, снижение кадастровой стоимости, ВРИ, ПЗЗ, разрешение на строительство, Волгоград">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bondarenko-land.ru/">
+    <!-- ИСПРАВЛЕНО: Ваш реальный домен -->
+    <meta property="og:url" content="https://zemlaw.ru/">
     <meta property="og:title" content="Бондаренко А.А. | Земельный консалтинг B2B">
     <meta property="og:description" content="Превращаем административные барьеры в активы. Комплексное сопровождение девелоперов и собственников недвижимости.">
     
@@ -243,6 +244,9 @@
             </div>
             
             <div class="hidden md:flex items-center gap-6">
+                <button onclick="openAuditModal()" class="text-xs font-bold text-accent uppercase tracking-widest border border-accent/30 px-4 py-2 rounded-full hover:bg-accent hover:text-black transition-all duration-300 mr-2">
+                    Аудит
+                </button>
                 <span class="text-xs text-gray-400 uppercase tracking-widest border border-white/10 px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-sm">Земля • Стройка • Выкуп</span>
                 <a href="tel:+79950291170" class="font-display font-bold text-white hover:text-accent transition-colors">+7 995 029 11 70</a>
             </div>
@@ -600,23 +604,11 @@
             const modal = document.getElementById('auditModal');
             if (modal) {
                 modal.classList.add('hidden');
-                // Очищаем хэш в адресе, чтобы при обновлении страницы окно не открывалось снова
-                if (window.location.hash === '#open-audit') {
-                    history.pushState("", document.title, window.location.pathname + window.location.search);
-                }
             }
         }
 
         document.addEventListener("DOMContentLoaded", function() {
             
-            // --- AUTO-OPEN MODAL FROM URL (FOR YANDEX DIRECT SITELINKS) ---
-            // Если в ссылке есть #open-audit, открываем форму сразу
-            if (window.location.hash === '#open-audit') {
-                setTimeout(() => {
-                    openAuditModal();
-                }, 500); // Небольшая задержка для плавности загрузки
-            }
-
             // --- SUN SCRIPT (OPTIMIZED) ---
             const sun = document.getElementById('sun-orb');
             let ticking = false;
