@@ -233,8 +233,6 @@
         <div class="max-w-[1240px] mx-auto px-6 py-3 flex justify-between items-center relative z-50 header-transparent">
             <div class="flex items-center gap-4 z-50">
                 <!-- Fallback to icon if image fails -->
-                <!-- Добавил классы invert и mix-blend-screen, чтобы убрать белый фон у логотипа через CSS -->
-                <!-- Также убрал hidden md:block, чтобы логотип был виден на всех устройствах -->
                 <img src="logo.png" alt="Логотип" class="h-10 w-auto object-contain invert mix-blend-screen" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex');">
                 <div class="hidden w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-accent border border-white/5 md:hidden"><i data-lucide="scale" class="w-5 h-5"></i></div>
                 
@@ -265,11 +263,14 @@
     <!-- HERO SECTION -->
     <section class="pt-32 md:pt-44 pb-20 px-4 min-h-screen flex items-center relative overflow-hidden" id="hero-section">
         <div class="max-w-[1240px] mx-auto w-full relative z-10">
+            <!-- Убрали грид и второй столбец, центрируем контент -->
             <div class="flex flex-col items-center justify-center text-center">
                 <div class="flex flex-col items-center relative max-w-4xl mx-auto">
                     
                     <div class="fade-in-section inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-500/20 bg-gray-500/5 mb-8 w-fit backdrop-blur-sm relative z-10">
+                        <!-- Изменен цвет кружка на зеленый -->
                         <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <!-- Изменил цвет текста на gray-500 -->
                         <span class="text-xs font-mono text-gray-500 uppercase tracking-widest font-bold">Личный контроль каждого дела</span>
                     </div>
 
@@ -307,6 +308,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Убрали блок с логотипом справа -->
             </div>
         </div>
     </section>
@@ -392,10 +395,12 @@
             <h2 class="fade-in-section font-display font-bold text-3xl md:text-5xl mb-6">Реестр рисков</h2>
             <p class="fade-in-section text-gray-500 max-w-2xl mb-12 text-lg">Законодательство переходит от уведомительного порядка к карательному.</p>
             
+            <!-- Выравнены 4 блока одинаково: Grid 2x2 -->
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- 1. Потеря Актива -->
+                <!-- 1. Потеря Актива (Убрал красный, применил glass-card) -->
                 <div class="fade-in-section glass-card p-8 group">
                     <div class="flex items-center gap-3 mb-6">
+                        <!-- Standardized Icon Style -->
                         <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent border border-accent/20">
                             <i data-lucide="alert-octagon" class="w-5 h-5"></i>
                         </div>
@@ -407,7 +412,7 @@
                     </div>
                 </div>
 
-                <!-- 2. Градостроительные Блоки -->
+                <!-- 2. Градостроительные Блоки (Убрал желтый, применил glass-card) -->
                 <div class="fade-in-section glass-card p-8 group">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent border border-accent/20">
@@ -421,7 +426,7 @@
                     </div>
                 </div>
 
-                <!-- 3. Цифровой Надзор -->
+                <!-- 3. Цифровой Надзор (Standard glass-card) -->
                 <div class="fade-in-section glass-card p-8 group">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent border border-accent/20">
@@ -435,7 +440,7 @@
                     </div>
                 </div>
 
-                <!-- 4. Финансовые Убытки -->
+                <!-- 4. Финансовые Убытки (Standard glass-card) -->
                 <div class="fade-in-section glass-card p-8 group">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent border border-accent/20">
@@ -452,18 +457,20 @@
             
             <!-- Цена игнорирования -->
             <div class="fade-in-section mt-6 glass-gradient-card p-8 flex flex-col md:flex-row items-center gap-8">
+                <!-- Changed text-accent to text-white -->
                 <div class="flex-1 relative z-10"><div class="inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-widest mb-2"><i data-lucide="trending-up" class="w-4 h-4"></i> Цена игнорирования</div><p class="text-gray-400 text-sm leading-relaxed">Пример: Владелец переплачивал <span class="text-white font-bold">12 млн руб</span>. Мы исправили ВРИ и выкупили участок.</p></div>
-                <!-- Trigger Modal -->
                 <div class="shrink-0 relative z-10"><button onclick="openAuditModal()" class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all">Рассчитать свои риски <i data-lucide="arrow-right" class="w-4 h-4"></i></button></div>
             </div>
             
-            <!-- Судебная защита -->
+            <!-- Судебная защита (Убрал зеленый, применил glass-gradient-card чтобы было как у всех остальных в этом блоке) -->
             <div class="fade-in-section mt-4 glass-gradient-card p-8 flex flex-col md:flex-row items-center gap-8">
                 <div class="flex-1">
+                    <!-- Changed text-green-500 to text-white -->
                     <div class="inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-widest mb-2"><i data-lucide="shield-check" class="w-4 h-4"></i> Судебная защита</div>
                     <p class="text-gray-400 text-sm leading-relaxed">Пример: Арендатору земельного участка был предъявлен иск от Администрации на сумму <span class="text-white font-bold">3,5 млн.руб</span>. <br> Проведя аудит и своевременно вступив в дело, мы взыскали с истца неосновательное обогащение <span class="text-white font-bold">85 тыс.руб.</span> и уменьшили текущие арендные платежи.</p>
                 </div>
                 <div class="shrink-0">
+                    <!-- Changed green styles to standard -->
                     <a href="#contact" class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all">Обсудить защиту <i data-lucide="message-square" class="w-4 h-4"></i></a>
                 </div>
             </div>
@@ -574,8 +581,7 @@
         </div>
     </section>
 
-    <!-- Убрал bg-[#131316], теперь фон прозрачный и совпадает с body -->
-    <footer class="border-t border-white/10 py-12 text-center text-xs text-gray-600 uppercase tracking-widest relative z-10">
+    <footer class="border-t border-white/10 py-12 text-center text-xs text-gray-600 uppercase tracking-widest relative z-10 bg-[#131316]">
         <p>© 2025 Бондаренко Антон Андреевич. Все права защищены. Не является публичной офертой.</p>
     </footer>
 
@@ -594,11 +600,23 @@
             const modal = document.getElementById('auditModal');
             if (modal) {
                 modal.classList.add('hidden');
+                // Очищаем хэш в адресе, чтобы при обновлении страницы окно не открывалось снова
+                if (window.location.hash === '#open-audit') {
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
+                }
             }
         }
 
         document.addEventListener("DOMContentLoaded", function() {
             
+            // --- AUTO-OPEN MODAL FROM URL (FOR YANDEX DIRECT SITELINKS) ---
+            // Если в ссылке есть #open-audit, открываем форму сразу
+            if (window.location.hash === '#open-audit') {
+                setTimeout(() => {
+                    openAuditModal();
+                }, 500); // Небольшая задержка для плавности загрузки
+            }
+
             // --- SUN SCRIPT (OPTIMIZED) ---
             const sun = document.getElementById('sun-orb');
             let ticking = false;
@@ -725,7 +743,7 @@
             }
 
             // GENERIC FORM SUBMISSION LOGIC (HANDLES BOTH FORMS)
-            function setupForm(formId, submitBtnId) {
+            function setupForm(formId, submitBtnId, goalId) {
                 const form = document.getElementById(formId);
                 const submitBtn = document.getElementById(submitBtnId);
 
@@ -745,6 +763,12 @@
                             headers: { 'Accept': 'application/json' }
                         }).then(response => {
                             if (response.ok) {
+                                // SEND METRICA GOAL
+                                if (typeof ym !== 'undefined') {
+                                    // UPDATED: Используем ваш ID 502789547
+                                    ym(502789547, 'reachGoal', goalId);
+                                }
+                                
                                 submitBtn.innerText = 'Успешно отправлено!';
                                 submitBtn.classList.remove('bg-accent', 'text-black');
                                 submitBtn.classList.add('bg-success', 'text-white');
@@ -771,15 +795,17 @@
                 }
             }
 
-            setupForm('contactForm', 'submitBtn');
-            setupForm('auditForm', 'auditSubmitBtn');
+            // Setup forms with specific Goal IDs
+            setupForm('contactForm', 'submitBtn', 'contact_send');
+            setupForm('auditForm', 'auditSubmitBtn', 'audit_send');
         });
     </script>
     
     <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a) })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106174393', 'ym');
-        ym(106174393, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+        // UPDATED: Инициализация счетчика с вашим ID 502789547
+        (function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a) })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=502789547', 'ym');
+        ym(502789547, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/106174393" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/502789547" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </body>
 </html>
